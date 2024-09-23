@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div>
+        <i class="fa-solid fa-headset"></i> Games opinion
+      </div>
+      <div>
+        <i class="fa-solid fa-house"></i>
+        <router-link to="/">Home</router-link>
+      </div>
+      
     </nav>
     <router-view/>
   </div>
@@ -13,20 +19,25 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
 nav {
-  padding: 30px;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  background-color: #2c2f33;
+  padding: 10px;
+  color: #fff;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 4px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  text-decoration: underline;
 }
 </style>
