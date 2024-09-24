@@ -38,7 +38,6 @@ export default {
 
         const json = await response.json()
         this.games = json.results
-        console.log(this.games[0])
 
       }
       catch(error){

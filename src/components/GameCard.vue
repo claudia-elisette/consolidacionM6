@@ -9,7 +9,7 @@
             <h4 class="card__item">Released: {{ release }}</h4>
             <h4 class="card__item">Updated: {{ update }}</h4>
             <div class="card__click card__item-b">
-                <button @click="redirectTo(name)">Opinar</button>
+                <button @click="redirectTo(id)">Opinar</button>
                 <a href="#"><i class="fa-solid fa-heart"></i></a>
             </div>
         </div> 
@@ -22,7 +22,7 @@ export default {
     name: 'game-comp',
     props: {
         id:{
-            type:String,
+            type:Number,
             Required:true
         },
         src:{
@@ -34,7 +34,7 @@ export default {
             Required:true
         },
         rating:{
-            type:String,
+            type:Number,
             Required:true
         },
         release:{
@@ -51,8 +51,8 @@ export default {
     },
     // computed: {},
     methods: {
-        redirectTo(name){
-            this.$router.push("/opiniones/"+name)
+        redirectTo(id){
+            this.$router.push("/opiniones/"+id)
         }
     }
     // watch: {},
