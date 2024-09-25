@@ -23,7 +23,6 @@ export default {
             required:true,
         },
         rating:{
-            type:Number,
             required:true,
         },
     },
@@ -44,14 +43,21 @@ export default {
 <style scoped>
     .card{
         width: 25rem;
+        border: 1px solid rgb(161, 158, 158);
+        border-radius: 5px;
     }
     img{
         width: 100%;
         height: 18rem;
     }
     .card__data{
+        height: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
+    }
+    h4{
+        font-weight: 400;
     }
 </style>
