@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import OpinionView from '@/views/OpinionView.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,10 @@ const routes = [
     path: '/opiniones/:id',
     component: OpinionView,
     props:true,
+  },
+  {
+    path:'*',
+    component:NotFoundView,
   },
 ]
 
